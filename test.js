@@ -5,7 +5,7 @@ const { By } = require("selenium-webdriver");
 const test = async () => {
   const driver = new webdriver.Builder()
     .forBrowser("chrome")
-    .setChromeOptions(new chrome.Options())
+    .setChromeOptions(new chrome.Options().headless())
     .build();
 
   await driver.get("http://localhost:3000");
